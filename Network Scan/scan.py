@@ -34,8 +34,8 @@ def scan(ip,s_port,f_port):
 def main():
     global arr_open
     r_thread=[]
-    ip=input('[+] Scan IP : ')
-    s_port,f_port=map(int,input('[+] (start port) (end port) : ').split())
+    ip=input('[+] Scan IP : ') # ex) 1.1.1.* , 1.1.*.* , 1.*.*.*
+    s_port,f_port=map(int,input('[+] (start port) (end port) : ').split()) # ex) 80 1000
     R_thread=int(input('[+] How many Packet would you send? : '))
     for i in range(R_thread):
         SF=Thread(target=scan,args=(ip,s_port,f_port))
